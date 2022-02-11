@@ -51,7 +51,7 @@ public class Spider {
 	private Integer defaultThreads;
 
 	@Value("${spider.detect.dead-cycle:5000}")
-	private Integer deadCycle;
+	private Long deadCycle;
 	
 	@Autowired
 	private FlowNoticeService flowNoticeService;
@@ -355,4 +355,8 @@ public class Spider {
 			this.executor = executor;
 		}
 	}
+
+
+
 }
+

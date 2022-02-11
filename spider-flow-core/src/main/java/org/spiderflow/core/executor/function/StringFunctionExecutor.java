@@ -173,4 +173,34 @@ public class StringFunctionExecutor implements FunctionExecutor{
 		return ids;
 	}
 
+
+	@Comment("根据字符串位置返回ASCII")
+	@Example("${string.charAt(str，index)}")
+	public static char charAt(String str,Integer index) {
+		return str.charAt(index);
+	}
+
+
+
+	@Comment("根据字符串位置返回ASCII根据数组传输下标进行累加")
+	@Example("${string.charAt(str，index[])}")
+	public static Integer charAt(String str,ArrayList<Integer> index) {
+		int number=0;
+		for (Integer integer : index) {
+			number=number+str.charAt(integer);
+		}
+
+		return number;
+	}
+
+
+
+
+	@Comment("字符串转数字")
+	@Example("${string.asInt(str)}")
+	public static Integer asInt(String str) {
+
+
+		return Integer.valueOf(str);
+	}
 }
